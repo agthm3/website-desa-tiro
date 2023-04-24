@@ -1,11 +1,13 @@
 <?php
 
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DestinasiController;
 use App\Http\Controllers\HomController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -23,9 +25,9 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 //pages Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -45,6 +47,16 @@ Route::get('/konktak', [KontakController::class, 'index'])->name('kontak.index')
 //pages Layanan
 Route::get('/profil', [LayananController::class, 'profil'] )->name('profil.index');
 Route::get('/pemerintah', [LayananController::class, 'pemerintah'])->name('pemerintah.index');
+
+//================================================================================================
+
+// Dashboard Home
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+
+// Dashboard News
+Route::get('/news', [NewsController::class, 'index'])->name('dashboard.news.index');
+Route::get('/news/create', [NewsController::class, 'create'])->name('dashboard.news.create');
+Route::post('/news/create', [NewsController::class, 'store'])->name('dashboard.news.store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

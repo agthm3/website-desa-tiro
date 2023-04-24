@@ -9,7 +9,7 @@
                             <div class="row">
                                 <div class="col-lg-4">
                                     <div class="logo">
-                                        <a href="index.html"><img
+                                        <a href="{{ route('home') }}"><img
                                                 src="{{ asset('pages/assets/img/logo/logo-navbar-01.png') }}"
                                                 alt="" style="width: 40vh" /></a>
                                     </div>
@@ -56,6 +56,9 @@
 
                                             <li>
                                                 <a href="{{ route('kontak.index') }}">Kontak Kami</a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('dashboard.index') }}">Dashboard</a>
                                             </li>
 
                                             @auth

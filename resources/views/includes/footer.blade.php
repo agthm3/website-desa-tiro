@@ -37,7 +37,7 @@
                                 <ul>
                                     <li><a href="#">Tentang Desa</a></li>
                                     <li>
-                                        <a href="#"> Destinasi Wisata</a>
+                                        <a href="{{ route('destinasi.index') }}"> Destinasi Wisata</a>
                                     </li>
                                     <li><a href="#"> Pengaduan</a></li>
                                     <li><a href="#"> Persuratan</a></li>
@@ -50,9 +50,9 @@
                             <div class="footer-tittle">
                                 <h4>Akun</h4>
                                 <ul>
-                                    <li><a href="#">Login</a></li>
+                                    <li><a href="{{ route('login') }}">Login</a></li>
                                     <li>
-                                        <a href="#">Registrasi</a>
+                                        <a href="{{ route('register') }}">Registrasi</a>
                                     </li>
                                 </ul>
                             </div>
