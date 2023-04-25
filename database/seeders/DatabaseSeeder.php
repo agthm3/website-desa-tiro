@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Andi Gigatera Halil M',
             'email' => 'gigam57@gmail.com',
             'password' => Hash::make('12345678'),
-            'is_admin' => true
+            // 'is_admin' => true
         ]);
     }
 }
