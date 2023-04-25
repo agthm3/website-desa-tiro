@@ -38,7 +38,8 @@
                       class="fa fa-keyboard me-2"></i>Berita</a>
               <a href="{{ route('dashboard.announcement.index') }}" class="nav-item nav-link"><i
                       class="fa fa-keyboard me-2"></i>Pengumuman</a>
-              <a href="destinasi-index.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Destinasi</a>
+              <a href="{{ route('dashboard.destination.index') }}" class="nav-item nav-link"><i
+                      class="fa fa-keyboard me-2"></i>Destinasi</a>
           </div>
       </nav>
   </div>
