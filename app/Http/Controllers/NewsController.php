@@ -16,7 +16,8 @@ class NewsController extends Controller
      */
     public function index()
     {
-        return view('dashboard.news.index');
+        $news = News::all();
+        return view('dashboard.news.index', compact('news'));
     }
 
     /**
@@ -48,6 +49,7 @@ class NewsController extends Controller
             'image' => $path
         ]);
         
+        
         return Redirect::route('dashboard.news.index');
     }
 
@@ -56,7 +58,7 @@ class NewsController extends Controller
      */
     public function show(News $news)
     {
-        //
+        return view('dashboard.news.show', compact('news'));
     }
 
     /**
@@ -64,7 +66,7 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        //
+        return view('dashboard.news.edit', compact('news'));
     }
 
     /**
@@ -72,7 +74,29 @@ class NewsController extends Controller
      */
     public function update(Request $request, News $news)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'article' => 'required',
+            'image' => 'image'
+        ]);
+
+
+        if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $path = time() . '_' . $request->name . '.' . $file->getClientOriginalExtension();
+
+                Storage::disk('local')->put('public/'. $path, file_get_contents($file));
+            } else {
+                $path = $news->image; // menggunakan kembali path yang sudah ada di database
+            }
+        $news->update([
+            'title' => $request->title, 
+            'article' => $request->article,
+            'image' => $path
+        ]);
+        
+        
+        return Redirect::route('dashboard.news.index');
     }
 
     /**

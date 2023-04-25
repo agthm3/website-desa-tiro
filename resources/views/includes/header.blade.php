@@ -57,9 +57,7 @@
                                             <li>
                                                 <a href="{{ route('kontak.index') }}">Kontak Kami</a>
                                             </li>
-                                            <li>
-                                                <a href="{{ route('dashboard.index') }}">Dashboard</a>
-                                            </li>
+
 
                                             @auth
                                                 <li class="nav-item dropdown">

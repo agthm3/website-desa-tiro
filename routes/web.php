@@ -57,6 +57,9 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/news', [NewsController::class, 'index'])->name('dashboard.news.index');
 Route::get('/news/create', [NewsController::class, 'create'])->name('dashboard.news.create');
 Route::post('/news/create', [NewsController::class, 'store'])->name('dashboard.news.store');
+Route::get('/news/detail/{news}', [NewsController::class, 'show'])->name('dashboard.news.show');
+Route::get('/news/edit/{news}', [NewsController::class, 'edit'])->name('dashboard.news.edit');
+Route::patch('/news/edit/{news}', [NewsController::class, 'update'])->name('dashboard.news.update');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
