@@ -15,6 +15,7 @@ class DestinationController extends Controller
     public function index()
     {
         $destinations = Destination::all();
+        session(['active_button' => 'destination']);
         return view('dashboard.destination.index', compact('destinations'));
     }
 

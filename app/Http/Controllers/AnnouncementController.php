@@ -15,6 +15,7 @@ class AnnouncementController extends Controller
     public function index()
     {
         $announcements = Announcement::all();
+        session(['active_button' => 'announcement']);
         return view('dashboard.announcement.index', compact('announcements'));
     }
 

@@ -11,6 +11,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        session(['active_button' => 'dashboard']);
         return view('pages.home.index');
     }
 

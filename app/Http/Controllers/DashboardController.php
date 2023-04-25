@@ -11,6 +11,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
+          session(['active_button' => 'dashboard']);
         return view('dashboard.home.index');
     }
 
