@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DestinasiController;
@@ -60,6 +61,14 @@ Route::post('/news/create', [NewsController::class, 'store'])->name('dashboard.n
 Route::get('/news/detail/{news}', [NewsController::class, 'show'])->name('dashboard.news.show');
 Route::get('/news/edit/{news}', [NewsController::class, 'edit'])->name('dashboard.news.edit');
 Route::patch('/news/edit/{news}', [NewsController::class, 'update'])->name('dashboard.news.update');
+
+// Dashboard announcement
+Route::get('/announcement', [AnnouncementController::class, 'index'])->name('dashboard.announcement.index');
+Route::get('/announcement/create', [AnnouncementController::class, 'create'])->name('dashboard.announcement.create');
+Route::post('/announcement/store', [AnnouncementController::class, 'store'])->name('dashboard.announcement.store');
+Route::get('/announcement/detail/{announcement}',[AnnouncementController::class, 'show'])->name('dashboard.announcement.show');
+Route::get('/announcement/edit/{announcement}', [AnnouncementController::class, 'edit'])->name('dashboard.announcement.edit');
+Route::patch('/announcement/edit/{announcement}', [AnnouncementController::class, 'update'])->name('dashboard.announcement.update');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

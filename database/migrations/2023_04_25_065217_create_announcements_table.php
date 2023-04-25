@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pengumumen', function (Blueprint $table) {
+        Schema::create('announcements', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
+            $table->text('title');
+            $table->longText('article');
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pengumumen');
+        Schema::dropIfExists('announcements');
     }
 };

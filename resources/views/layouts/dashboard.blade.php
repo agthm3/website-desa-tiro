@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('admin/css/style.css') }}" rel="stylesheet" />
+    <script src="https://cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
 </head>
 
 <body>
@@ -75,6 +76,9 @@
 
     <!-- Template Javascript -->
     <script src="{{ asset('admin/js/main.js') }}"></script>
+    <script>
+        CKEDITOR.replace('article');
+    </script>
 </body>
 
 </html>
