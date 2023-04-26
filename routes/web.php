@@ -10,6 +10,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PemerintahDesaController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProfilDesaController;
 use App\Http\Controllers\ProfileController;
@@ -74,20 +75,29 @@ Route::get('/dashboard/announcement/edit/{announcement}', [AnnouncementControlle
 Route::patch('/dashboard/announcement/edit/{announcement}', [AnnouncementController::class, 'update'])->name('dashboard.announcement.update');
 
 // Dashboard Destination
-Route::get('/destination', [DestinationController::class, 'index'])->name('dashboard.destination.index');
-Route::get('/destination/create', [DestinationController::class, 'create'])->name('dashboard.destination.create');
-Route::post('/destination/store', [DestinationController::class, 'store'])->name('dashboard.destination.store');
-Route::get('/destination/show/{destination}', [DestinationController::class, 'show'])->name('dashboard.destination.show');
-Route::get('/destination/edit/{destination}', [DestinationController::class, 'edit'])->name('dashboard.destination.edit');
-Route::patch('/destination/edit/{destination}', [DestinationController::class, 'update'])->name('dashboard.destination.update');
+Route::get('/dashboard/destination', [DestinationController::class, 'index'])->name('dashboard.destination.index');
+Route::get('/dashboard/destination/create', [DestinationController::class, 'create'])->name('dashboard.destination.create');
+Route::post('/dashboard/destination/store', [DestinationController::class, 'store'])->name('dashboard.destination.store');
+Route::get('/dashboard/destination/show/{destination}', [DestinationController::class, 'show'])->name('dashboard.destination.show');
+Route::get('/dashboard/destination/edit/{destination}', [DestinationController::class, 'edit'])->name('dashboard.destination.edit');
+Route::patch('/dashboard/destination/edit/{destination}', [DestinationController::class, 'update'])->name('dashboard.destination.update');
 
 // Dashboard Profil Desa
-Route::get('/profil-desa', [ProfilDesaController::class, 'index'])->name('dashboard.profil.index');
-Route::get('/profile-desa/create', [ProfilDesaController::class, 'create'])->name('dashboard.profil.create');
-Route::post('/porfile-desa/create', [ProfilDesaController::class, 'store'])->name('dashboard.profil.store');
-Route::get('/profil-desa/show/{profilDesa}', [ProfilDesaController::class, 'show'])->name('dashboard.profil.show');
-Route::get('/profil-desa/edit/{profilDesa}', [ProfilDesaController::class, 'edit'])->name('dashboard.profil.edit');
-Route::patch('/profil-desa/edit/{profilDesa}', [ProfilDesaController::class, 'update'])->name('dashboard.profil.update');
+Route::get('/dashboard/profil-desa', [ProfilDesaController::class, 'index'])->name('dashboard.profil.index');
+Route::get('/dashboard/profile-desa/create', [ProfilDesaController::class, 'create'])->name('dashboard.profil.create');
+Route::post('/dashboard/porfile-desa/create', [ProfilDesaController::class, 'store'])->name('dashboard.profil.store');
+Route::get('/dashboard/profil-desa/show/{profilDesa}', [ProfilDesaController::class, 'show'])->name('dashboard.profil.show');
+Route::get('/dashboard/profil-desa/edit/{profilDesa}', [ProfilDesaController::class, 'edit'])->name('dashboard.profil.edit');
+Route::patch('/dashboard/profil-desa/edit/{profilDesa}', [ProfilDesaController::class, 'update'])->name('dashboard.profil.update');
+
+
+//Dashboard Pemerintah Desa
+Route::get('/dashboard/pemerintah-desa', [PemerintahDesaController::class, 'index'])->name('dashboard.pemerintah.index');
+Route::get('/dashboard/pemerintah-desa/create', [PemerintahDesaController::class, 'create'])->name('dashboard.pemerintah.create');
+Route::post('/dashboard/pemerintah-desa/create', [PemerintahDesaController::class, 'store'])->name('dashboard.pemerintah.store');
+Route::get('/dashboard/pemerintah-desa/show/{pemerintahDesa}', [PemerintahDesaController::class, 'show'])->name('dashboard.pemerintah.show');
+Route::get('/dashboard/pemerintah-desa/edit/{pemerintahDesa}', [PemerintahDesaController::class, 'edit'])->name('dashboard.pemerintah.edit');
+Route::patch('/dashboard/pemerintah-desa/edit/{pemerintahDesa}', [PemerintahDesaController::class, 'update'])->name('dashboard.pemerintah.update');
 
 
 Route::middleware('auth')->group(function () {

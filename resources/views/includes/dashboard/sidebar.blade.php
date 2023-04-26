@@ -29,7 +29,7 @@
                       Desa</a>
                   <div class="dropdown-menu bg-transparent border-0">
                       <a href="{{ route('dashboard.profil.index') }}" class="dropdown-item">Profil Desa</a>
-                      <a href="pemerintah-index.html" class="dropdown-item">Pemerintah Desa</a>
+                      <a href="{{ route('dashboard.pemerintah.index') }}" class="dropdown-item">Pemerintah Desa</a>
                       <a href="maintenance.html" class="dropdown-item">Persuratan</a>
                       <a href="maintenance.html" class="dropdown-item">Pengaduan</a>
                   </div>
