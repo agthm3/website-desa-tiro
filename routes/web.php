@@ -11,6 +11,7 @@ use App\Http\Controllers\KontakController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\ProfilDesaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\PostDec;
@@ -79,6 +80,14 @@ Route::post('/destination/store', [DestinationController::class, 'store'])->name
 Route::get('/destination/show/{destination}', [DestinationController::class, 'show'])->name('dashboard.destination.show');
 Route::get('/destination/edit/{destination}', [DestinationController::class, 'edit'])->name('dashboard.destination.edit');
 Route::patch('/destination/edit/{destination}', [DestinationController::class, 'update'])->name('dashboard.destination.update');
+
+// Dashboard Profil Desa
+Route::get('/profil-desa', [ProfilDesaController::class, 'index'])->name('dashboard.profil.index');
+Route::get('/profile-desa/create', [ProfilDesaController::class, 'create'])->name('dashboard.profil.create');
+Route::post('/porfile-desa/create', [ProfilDesaController::class, 'store'])->name('dashboard.profil.store');
+Route::get('/profil-desa/show/{profilDesa}', [ProfilDesaController::class, 'show'])->name('dashboard.profil.show');
+Route::get('/profil-desa/edit/{profilDesa}', [ProfilDesaController::class, 'edit'])->name('dashboard.profil.edit');
+Route::patch('/profil-desa/edit/{profilDesa}', [ProfilDesaController::class, 'update'])->name('dashboard.profil.update');
 
 
 Route::middleware('auth')->group(function () {

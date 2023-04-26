@@ -23,12 +23,12 @@
                   class="nav-item nav-link  {{ session('active_button') == 'dashboard' ? 'active' : '' }}"><i
                       class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
 
-              <div class="nav-item dropdown  {{ session('active_button') == 'layanan' ? 'active' : '' }}">
+              <div class="nav-item dropdown  {{ session('active_button') == 'layanan' ? 'active' : 'profilDesa' }}">
                   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i
                           class="fa fa-laptop me-2"></i>Layanan
                       Desa</a>
                   <div class="dropdown-menu bg-transparent border-0">
-                      <a href="profil-desa-index.html" class="dropdown-item">Profil Desa</a>
+                      <a href="{{ route('dashboard.profil.index') }}" class="dropdown-item">Profil Desa</a>
                       <a href="pemerintah-index.html" class="dropdown-item">Pemerintah Desa</a>
                       <a href="maintenance.html" class="dropdown-item">Persuratan</a>
                       <a href="maintenance.html" class="dropdown-item">Pengaduan</a>
