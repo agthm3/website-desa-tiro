@@ -36,7 +36,7 @@
                                                             Desa</a>
                                                     </li>
                                                     <li>
-                                                        <a href="persuratan.html">Persuratan</a>
+                                                        <a href="{{ route('maintenance.index') }}">Persuratan</a>
                                                     </li>
                                                     <li>
                                                         <a href="pengaduan.html">Pengaduan</a>

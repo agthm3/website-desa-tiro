@@ -34,6 +34,9 @@ use PhpParser\Node\Expr\PostDec;
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
+// Dev Page
+Route::get('/maintenance', [HomeController::class, 'maintenance'])->name('maintenance.index');
+
 //pages Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
 

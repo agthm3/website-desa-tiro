@@ -18,7 +18,10 @@ class HomeController extends Controller
         $destinations = Destination::latest()->limit(3)->get();
         return view('pages.home.index', compact('news', 'destinations'));
     }
-
+    public function maintenance()
+    {
+        return view('maintenance');
+    }
     /**
      * Show the form for creating a new resource.
      */
