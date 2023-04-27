@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -12,6 +13,7 @@ class HomeController extends Controller
     public function index()
     {
         session(['active_button' => 'dashboard']);
+     
         return view('pages.home.index');
     }
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class BeritaController extends Controller
@@ -12,7 +13,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        return view('pages.berita.index');
+        $news = News::all();
+        return view('pages.berita.index', compact('news'));
     }
 
     /**
