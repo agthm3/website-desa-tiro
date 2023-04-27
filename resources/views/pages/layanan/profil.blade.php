@@ -30,8 +30,7 @@
                         </div>
                         <div class="blog_details">
                             <h2>
-                                Second divided from form fish beast made
-                                every of seas all gathered us saying he our
+                                {{ $profil->title }}
                             </h2>
                             <ul class="blog-info-link mt-3 mb-4">
                                 <li>
@@ -44,22 +43,7 @@
                                 </li>
                             </ul>
                             <p class="excert">
-                                MCSE boot camps have its supporters and its
-                                detractors. Some people do not understand
-                                why you should have to spend money on boot
-                                camp when you can get the MCSE study
-                                materials yourself at a fraction of the camp
-                                price. However, who has the willpower
-                            </p>
-                            <p>
-                                MCSE boot camps have its supporters and its
-                                detractors. Some people do not understand
-                                why you should have to spend money on boot
-                                camp when you can get the MCSE study
-                                materials yourself at a fraction of the camp
-                                price. However, who has the willpower to
-                                actually sit through a self-imposed MCSE
-                                training. who has the willpower to actually
+                                {!! Str::limit($profil->article, 100) !!}
                             </p>
                             <div class="quote-wrapper">
                                 <div class="quotes">
@@ -73,24 +57,7 @@
                                     through a self-imposed MCSE training.
                                 </div>
                             </div>
-                            <p>
-                                MCSE boot camps have its supporters and its
-                                detractors. Some people do not understand
-                                why you should have to spend money on boot
-                                camp when you can get the MCSE study
-                                materials yourself at a fraction of the camp
-                                price. However, who has the willpower
-                            </p>
-                            <p>
-                                MCSE boot camps have its supporters and its
-                                detractors. Some people do not understand
-                                why you should have to spend money on boot
-                                camp when you can get the MCSE study
-                                materials yourself at a fraction of the camp
-                                price. However, who has the willpower to
-                                actually sit through a self-imposed MCSE
-                                training. who has the willpower to actually
-                            </p>
+
                         </div>
                     </div>
                     <div class="navigation-top">
@@ -382,42 +349,17 @@
                         </aside>
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Pengumuman Terbaru</h3>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_1.png" alt="post" />
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
+                            @foreach ($announcements as $item)
+                                <div class="media post_item">
+                                    <img class="card-img rounded-0" src="{{ url('storage/' . $item->image) }}">
+                                    <div class="media-body">
+                                        <a href="single-blog.html">
+                                            <h3>{{ $item->titel }}</h3>
+                                        </a>
+                                        <p>{{ $item->created_at->format('d M Y') }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_2.png" alt="post" />
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_3.png" alt="post" />
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_4.png" alt="post" />
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </aside>
                     </div>
                 </div>

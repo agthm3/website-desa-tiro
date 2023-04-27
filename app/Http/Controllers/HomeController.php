@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Destination;
 use App\Models\News;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,9 @@ class HomeController extends Controller
     public function index()
     {
         session(['active_button' => 'dashboard']);
-     
-        return view('pages.home.index');
+        $news = News::latest()->limit(3)->get();
+        $destinations = Destination::latest()->limit(3)->get();
+        return view('pages.home.index', compact('news', 'destinations'));
     }
 
     /**

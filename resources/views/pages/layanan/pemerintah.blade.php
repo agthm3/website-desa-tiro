@@ -22,6 +22,7 @@
     <!-- slider Area End-->
     <!--================Blog Area =================-->
     <section class="blog_area single-post-area section-padding">
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 posts-list">

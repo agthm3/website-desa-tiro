@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use App\Models\Layanan;
+use App\Models\ProfilDesa;
 use Illuminate\Http\Request;
 
 class LayananController extends Controller
@@ -12,7 +14,9 @@ class LayananController extends Controller
      */
     public function profil()
     {
-        return view('pages.layanan.profil');
+        $profil = ProfilDesa::all()->first();
+        $announcements = Announcement::latest()->limit(5)->get();
+        return view('pages.layanan.profil', compact('profil', 'announcements'));
     }
     public function pemerintah()
     {
