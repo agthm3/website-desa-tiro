@@ -27,8 +27,13 @@
                                             <li>
                                                 <a href="{{ route('profil.index') }}">Layanan Desa</a>
                                                 <ul class="submenu">
+
                                                     <li>
                                                         <a href="{{ route('profil.index') }}">Profil Desa</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="{{ route('pemerintah.index') }}">Pemerintah
+                                                            Desa</a>
                                                     </li>
                                                     <li>
                                                         <a href="persuratan.html">Persuratan</a>
@@ -37,10 +42,6 @@
                                                         <a href="pengaduan.html">Pengaduan</a>
                                                     </li>
 
-                                                    <li>
-                                                        <a href="{{ route('pemerintah.index') }}">Pemerintah
-                                                            Desa</a>
-                                                    </li>
                                                 </ul>
                                             </li>
                                             <li>

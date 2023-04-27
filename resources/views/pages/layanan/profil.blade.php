@@ -25,8 +25,7 @@
                 <div class="col-lg-8 posts-list">
                     <div class="single-post">
                         <div class="feature-img">
-                            <img class="img-fluid" src="{{ asset('pages/assets/img/blog/single_blog_1.png') }}"
-                                alt="" />
+                            <img class="card-img rounded-0" src="{{ url('storage/' . $profil->image) }}">
                         </div>
                         <div class="blog_details">
                             <h2>

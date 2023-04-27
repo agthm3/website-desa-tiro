@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use App\Models\Layanan;
+use App\Models\PemerintahDesa;
 use App\Models\ProfilDesa;
 use Illuminate\Http\Request;
 
@@ -16,11 +17,14 @@ class LayananController extends Controller
     {
         $profil = ProfilDesa::all()->first();
         $announcements = Announcement::latest()->limit(5)->get();
-        return view('pages.layanan.profil', compact('profil', 'announcements'));
+      
+        return view('pages.layanan.profil', compact('profil', 'announcements', ));
     }
     public function pemerintah()
     {
-        return view('pages.layanan.pemerintah');
+          $pemerintah = PemerintahDesa::all()->first();
+           $announcements = Announcement::latest()->limit(5)->get();
+        return view('pages.layanan.pemerintah', compact('pemerintah', 'announcements'));
     }
     public function index()
     {
