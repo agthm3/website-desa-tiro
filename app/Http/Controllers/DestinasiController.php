@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destinasi;
+use App\Models\Destination;
 use Illuminate\Http\Request;
 
 class DestinasiController extends Controller
@@ -12,7 +13,8 @@ class DestinasiController extends Controller
      */
     public function index()
     {
-        return view('pages.destinasi.index');
+        $destinations = Destination::all();
+        return view('pages.destinasi.index', compact('destinations'));
     }
 
     /**

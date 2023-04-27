@@ -35,306 +35,55 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <a href="detail-destination.html">
-                            <div class="single-place mb-30">
-                                <div class="place-img">
-                                    <img src="{{ asset('pages/assets/img/service/services1.jpg') }}" alt="" />
-                                </div>
-                                <div class="place-cap">
-                                    <div class="place-cap-top">
-                                        <!-- <span
-                                                            ><i class="fas fa-star"></i
-                                                            ><span>8.0 Superb</span>
-                                                        </span> -->
-                                        <h3>
-                                            <a href="#">The Dark Forest
-                                                Adventure</a>
-                                        </h3>
-                                        <p class="dolor">
-                                            <span>Tempat yang cocok untuk
-                                                camping dan buat api
-                                                unggun</span>
-                                        </p>
-                                        <hr />
-                                        <div class="row">
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #Pantai
+                    @foreach ($destinations as $item)
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <a href="detail-destination.html">
+                                <div class="single-place mb-30">
+                                    <div class="place-img">
+                                        <img class="card-img rounded-0" src="{{ url('storage/' . $item->image) }}">
+                                    </div>
+                                    <div class="place-cap">
+                                        <div class="place-cap-top">
+                                            <!-- <span
+                                                                                                    ><i class="fas fa-star"></i
+                                                                                                    ><span>8.0 Superb</span>
+                                                                                                </span> -->
+                                            <h3>
+                                                <a href="#">{{ $item->title }}</a>
+                                            </h3>
+                                            <p class="dolor">
+                                                <span>{!! Str::limit($item->article, 100) !!}</span>
                                             </p>
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #CagarBudaya
-                                            </p>
+                                            <hr />
+                                            <div class="row">
+                                                <p class="text-info ml-1" style="font-weight: bolder">
+                                                    #Pantai
+                                                </p>
+                                                <p class="text-info ml-1" style="font-weight: bolder">
+                                                    #CagarBudaya
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="place-cap-bottom">
+                                            <ul>
+                                                <!-- <li>
+                                                                                                        <i class="far fa-clock"></i
+                                                                                                        >3 Days
+                                                                                                    </li> -->
+                                                <li>
+                                                    <i class="fas fa-comment"></i>10 Komentar
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-user"></i>Admin
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-
-                                    <div class="place-cap-bottom">
-                                        <ul>
-                                            <!-- <li>
-                                                                <i class="far fa-clock"></i
-                                                                >3 Days
-                                                            </li> -->
-                                            <li>
-                                                <i class="fas fa-comment"></i>10 Komentar
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i>Admin
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="single-place mb-30">
-                                <div class="place-img">
-                                    <img src="assets/img/service/services1.jpg" alt="" />
-                                </div>
-                                <div class="place-cap">
-                                    <div class="place-cap-top">
-                                        <!-- <span
-                                                            ><i class="fas fa-star"></i
-                                                            ><span>8.0 Superb</span>
-                                                        </span> -->
-                                        <h3>
-                                            <a href="#">The Dark Forest
-                                                Adventure</a>
-                                        </h3>
-                                        <p class="dolor">
-                                            <span>Tempat yang cocok untuk
-                                                camping dan buat api
-                                                unggun</span>
-                                        </p>
-                                        <hr />
-                                        <div class="row">
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #Pantai
-                                            </p>
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #CagarBudaya
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="place-cap-bottom">
-                                        <ul>
-                                            <!-- <li>
-                                                                <i class="far fa-clock"></i
-                                                                >3 Days
-                                                            </li> -->
-                                            <li>
-                                                <i class="fas fa-comment"></i>10 Komentar
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i>Admin
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="single-place mb-30">
-                                <div class="place-img">
-                                    <img src="assets/img/service/services1.jpg" alt="" />
-                                </div>
-                                <div class="place-cap">
-                                    <div class="place-cap-top">
-                                        <!-- <span
-                                                            ><i class="fas fa-star"></i
-                                                            ><span>8.0 Superb</span>
-                                                        </span> -->
-                                        <h3>
-                                            <a href="#">The Dark Forest
-                                                Adventure</a>
-                                        </h3>
-                                        <p class="dolor">
-                                            <span>Tempat yang cocok untuk
-                                                camping dan buat api
-                                                unggun</span>
-                                        </p>
-                                        <hr />
-                                        <div class="row">
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #Pantai
-                                            </p>
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #CagarBudaya
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="place-cap-bottom">
-                                        <ul>
-                                            <!-- <li>
-                                                                <i class="far fa-clock"></i
-                                                                >3 Days
-                                                            </li> -->
-                                            <li>
-                                                <i class="fas fa-comment"></i>10 Komentar
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i>Admin
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="single-place mb-30">
-                                <div class="place-img">
-                                    <img src="assets/img/service/services1.jpg" alt="" />
-                                </div>
-                                <div class="place-cap">
-                                    <div class="place-cap-top">
-                                        <!-- <span
-                                                            ><i class="fas fa-star"></i
-                                                            ><span>8.0 Superb</span>
-                                                        </span> -->
-                                        <h3>
-                                            <a href="#">The Dark Forest
-                                                Adventure</a>
-                                        </h3>
-                                        <p class="dolor">
-                                            <span>Tempat yang cocok untuk
-                                                camping dan buat api
-                                                unggun</span>
-                                        </p>
-                                        <hr />
-                                        <div class="row">
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #Pantai
-                                            </p>
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #CagarBudaya
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="place-cap-bottom">
-                                        <ul>
-                                            <!-- <li>
-                                                                <i class="far fa-clock"></i
-                                                                >3 Days
-                                                            </li> -->
-                                            <li>
-                                                <i class="fas fa-comment"></i>10 Komentar
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i>Admin
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="single-place mb-30">
-                                <div class="place-img">
-                                    <img src="assets/img/service/services1.jpg" alt="" />
-                                </div>
-                                <div class="place-cap">
-                                    <div class="place-cap-top">
-                                        <!-- <span
-                                                            ><i class="fas fa-star"></i
-                                                            ><span>8.0 Superb</span>
-                                                        </span> -->
-                                        <h3>
-                                            <a href="#">The Dark Forest
-                                                Adventure</a>
-                                        </h3>
-                                        <p class="dolor">
-                                            <span>Tempat yang cocok untuk
-                                                camping dan buat api
-                                                unggun</span>
-                                        </p>
-                                        <hr />
-                                        <div class="row">
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #Pantai
-                                            </p>
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #CagarBudaya
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="place-cap-bottom">
-                                        <ul>
-                                            <!-- <li>
-                                                                <i class="far fa-clock"></i
-                                                                >3 Days
-                                                            </li> -->
-                                            <li>
-                                                <i class="fas fa-comment"></i>10 Komentar
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i>Admin
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <a href="">
-                            <div class="single-place mb-30">
-                                <div class="place-img">
-                                    <img src="assets/img/service/services1.jpg" alt="" />
-                                </div>
-                                <div class="place-cap">
-                                    <div class="place-cap-top">
-                                        <!-- <span
-                                                            ><i class="fas fa-star"></i
-                                                            ><span>8.0 Superb</span>
-                                                        </span> -->
-                                        <h3>
-                                            <a href="#">The Dark Forest
-                                                Adventure</a>
-                                        </h3>
-                                        <p class="dolor">
-                                            <span>Tempat yang cocok untuk
-                                                camping dan buat api
-                                                unggun</span>
-                                        </p>
-                                        <hr />
-                                        <div class="row">
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #Pantai
-                                            </p>
-                                            <p class="text-info ml-1" style="font-weight: bolder">
-                                                #CagarBudaya
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="place-cap-bottom">
-                                        <ul>
-                                            <!-- <li>
-                                                                <i class="far fa-clock"></i
-                                                                >3 Days
-                                                            </li> -->
-                                            <li>
-                                                <i class="fas fa-comment"></i>10 Komentar
-                                            </li>
-                                            <li>
-                                                <i class="fas fa-user"></i>Admin
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
