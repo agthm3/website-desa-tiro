@@ -42,6 +42,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //pages Berita
 Route::get('/berita',[ BeritaController::class, 'index'])->name('berita.index');
+Route::get('/berita/{news}', [NewsController::class, 'show_pages'])->name('pages.news.show');
 
 //pages Pengumuman
 Route::get('/pengumuman', [PengumumanController::class, 'index'])->name('pengumuman.index');

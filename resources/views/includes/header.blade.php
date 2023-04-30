@@ -39,7 +39,7 @@
                                                         <a href="{{ route('maintenance.index') }}">Persuratan</a>
                                                     </li>
                                                     <li>
-                                                        <a href="pengaduan.html">Pengaduan</a>
+                                                        <a href="{{ route('maintenance.index') }}">Pengaduan</a>
                                                     </li>
 
                                                 </ul>

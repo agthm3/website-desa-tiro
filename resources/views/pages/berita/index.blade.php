@@ -26,13 +26,13 @@
                     <div class="blog_left_sidebar">
                         @foreach ($news as $item)
                             <article class="blog_item">
-                                <a href="detail-berita.html">
+                                <a href="{{ route('pages.news.show', $item) }}">
                                     <div class="blog_item_img">
                                         {{-- <img 
                                             src="{{ asset('pages/assets/img/blog/single_blog_1.png') }}" alt="" /> --}}
                                         <img class="card-img rounded-0" src="{{ url('storage/' . $item->image) }}"
                                             alt="">
-                                        <a href="#" class="blog_item_date">
+                                        <a href="{{ route('pages.news.show', $item) }}" class="blog_item_date">
                                             <h3>{{ $item->created_at->format('d') }}</h3>
                                             <p>{{ $item->created_at->format('M') }}</p>
                                         </a>

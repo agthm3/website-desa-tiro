@@ -62,6 +62,16 @@ class NewsController extends Controller
         return view('dashboard.news.show', compact('news'));
     }
 
+    public function show_pages(News $news)
+    {
+        // ambil artikel sebelumnya
+        $previousNews = News::where('id', '<', $news->id)->orderBy('id', 'desc')->first();
+
+        // ambil artikel selanjutnya
+        $nextNews = News::where('id', '>', $news->id)->orderBy('id', 'asc')->first();
+        return view('pages.berita.show', compact('news', 'previousNews', 'nextNews'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

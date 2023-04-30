@@ -71,7 +71,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="">
+                                    <a href="{{ route('maintenance.index') }}">
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="single-services text-center mb-30">
@@ -93,7 +93,7 @@
                                     </a>
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                                    <a href="">
+                                    <a href="{{ route('berita.index') }}">
                                         <div class="card">
                                             <div class="card-body">
                                                 <div class="single-services text-center mb-30">
@@ -146,9 +146,9 @@
                                     <div class="place-cap">
                                         <div class="place-cap-top">
                                             <!-- <span
-                                                                                        ><i class="fas fa-star"></i
-                                                                                        ><span>8.0 Superb</span>
-                                                                                    </span> -->
+                                                                                                ><i class="fas fa-star"></i
+                                                                                                ><span>8.0 Superb</span>
+                                                                                            </span> -->
                                             <h3>
                                                 <a href="#">{{ $item->title }}
                                                 </a>
@@ -166,9 +166,9 @@
                                         <div class="place-cap-bottom">
                                             <ul>
                                                 <!-- <li>
-                                                                                            <i class="far fa-clock"></i
-                                                                                            >3 Days
-                                                                                        </li> -->
+                                                                                                    <i class="far fa-clock"></i
+                                                                                                    >3 Days
+                                                                                                </li> -->
                                                 <li>
                                                     <i class="fas fa-comment"></i>10 Komentar
                                                 </li>
@@ -209,9 +209,9 @@
                                     <div class="place-cap">
                                         <div class="place-cap-top">
                                             <!-- <span
-                                                                                        ><i class="fas fa-star"></i
-                                                                                        ><span>8.0 Superb</span>
-                                                                                    </span> -->
+                                                                                                ><i class="fas fa-star"></i
+                                                                                                ><span>8.0 Superb</span>
+                                                                                            </span> -->
                                             <h3>
                                                 <a href="#">{{ $item->title }}</a>
                                             </h3>
@@ -232,9 +232,9 @@
                                         <div class="place-cap-bottom">
                                             <ul>
                                                 <!-- <li>
-                                                                                            <i class="far fa-clock"></i
-                                                                                            >3 Days
-                                                                                        </li> -->
+                                                                                                    <i class="far fa-clock"></i
+                                                                                                    >3 Days
+                                                                                                </li> -->
                                                 <li>
                                                     <i class="fas fa-comment"></i>10 Komentar
                                                 </li>
@@ -254,33 +254,33 @@
         <!-- Favourite Places End -->
         <!-- Video Start Arera -->
         <!-- <div
-                                                        class="video-area video-bg pt-200 pb-200"
-                                                        data-background="assets/img/service/video-bg.jpg"
-                                                    >
-                                                        <div class="container">
-                                                            <div class="row">
-                                                                <div class="col-xl-12">
-                                                                    <div class="video-caption text-center">
-                                                                        <div class="video-icon">
-                                                                            <a
-                                                                                class="popup-video"
-                                                                                href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
-                                                                                tabindex="0"
-                                                                                ><i class="fas fa-play"></i
-                                                                            ></a>
+                                                                class="video-area video-bg pt-200 pb-200"
+                                                                data-background="assets/img/service/video-bg.jpg"
+                                                            >
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="col-xl-12">
+                                                                            <div class="video-caption text-center">
+                                                                                <div class="video-icon">
+                                                                                    <a
+                                                                                        class="popup-video"
+                                                                                        href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
+                                                                                        tabindex="0"
+                                                                                        ><i class="fas fa-play"></i
+                                                                                    ></a>
+                                                                                </div>
+                                                                                <p class="pera1">
+                                                                                    Love where you're going in the perfect time
+                                                                                </p>
+                                                                                <p class="pera2">
+                                                                                    Tripo is a World Leading Online
+                                                                                </p>
+                                                                                <p class="pera3">Tour Booking Platform</p>
+                                                                            </div>
                                                                         </div>
-                                                                        <p class="pera1">
-                                                                            Love where you're going in the perfect time
-                                                                        </p>
-                                                                        <p class="pera2">
-                                                                            Tripo is a World Leading Online
-                                                                        </p>
-                                                                        <p class="pera3">Tour Booking Platform</p>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
+                                                            </div> -->
         <!-- Video Start End -->
         <!-- Support Company Start-->
         <div class="support-company-area support-padding fix">
