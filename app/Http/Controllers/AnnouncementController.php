@@ -60,6 +60,16 @@ class AnnouncementController extends Controller
         return view('dashboard.announcement.show', compact('announcement'));
     }
 
+    public function show_pages(Announcement $announcement)
+    {
+        // ambil artikel sebelumnya
+        $previousAnnouncement = Announcement::where('id', '<', $announcement->id)->orderBy('id', 'desc')->first();
+
+        // ambil artikel selanjutnya
+        $nextAnnouncement = Announcement::where('id', '>', $announcement->id)->orderBy('id', 'asc')->first();
+        return view('pages.pengumuman.show', compact('announcement', 'previousAnnouncement', 'nextAnnouncement'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      */

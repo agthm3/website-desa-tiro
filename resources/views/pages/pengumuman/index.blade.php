@@ -26,7 +26,7 @@
                     <div class="blog_left_sidebar">
                         @foreach ($announcements as $item)
                             <article class="blog_item">
-                                <a href="detail-announcement.html">
+                                <a href="{{ route('pages.announcement.show', $item) }}">
                                     <div class="blog_item_img">
                                         <img class="card-img rounded-0" src="{{ url('storage/' . $item->image) }}"
                                             alt="">

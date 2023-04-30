@@ -46,6 +46,7 @@ Route::get('/berita/{news}', [NewsController::class, 'show_pages'])->name('pages
 
 //pages Pengumuman
 Route::get('/pengumuman', [PengumumanController::class, 'index'])->name('pengumuman.index');
+Route::get('/pengumuman/{announcement}', [AnnouncementController::class, 'show_pages'])->name('pages.announcement.show');
 
 //pages Destinasi
 Route::get('/destinasi', [DestinasiController::class, 'index'])->name('destinasi.index');
