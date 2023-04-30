@@ -59,12 +59,21 @@ class DestinationController extends Controller
     {
         return view('dashboard.destination.show', compact('destination'));
     }
+    public function show_pages(Destination $destination)
+    {
+        // ambil artikel sebelumnya
+        $previousDestination = Destination::where('id', '<', $destination->id)->orderBy('id', 'desc')->first();
 
+        // ambil artikel selanjutnya
+        $nextDestination = Destination::where('id', '>', $destination->id)->orderBy('id', 'asc')->first();
+        return view('pages.destinasi.show', compact('destination', 'nextDestination', 'previousDestination'));
+    }
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(Destination $destination)
     {
+    
         return view('dashboard.destination.edit', compact('destination'));
     }
 

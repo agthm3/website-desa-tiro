@@ -37,7 +37,7 @@
                 <div class="row">
                     @foreach ($destinations as $item)
                         <div class="col-xl-4 col-lg-4 col-md-6">
-                            <a href="detail-destination.html">
+                            <a href="{{ route('pages.destination.show', $item) }}">
                                 <div class="single-place mb-30">
                                     <div class="place-img">
                                         <img class="card-img rounded-0" src="{{ url('storage/' . $item->image) }}">
@@ -45,11 +45,12 @@
                                     <div class="place-cap">
                                         <div class="place-cap-top">
                                             <!-- <span
-                                                                                                    ><i class="fas fa-star"></i
-                                                                                                    ><span>8.0 Superb</span>
-                                                                                                </span> -->
+                                                                                                                ><i class="fas fa-star"></i
+                                                                                                                ><span>8.0 Superb</span>
+                                                                                                            </span> -->
                                             <h3>
-                                                <a href="#">{{ $item->title }}</a>
+                                                <a
+                                                    href="{{ route('pages.destination.show', $item) }}">{{ $item->title }}</a>
                                             </h3>
                                             <p class="dolor">
                                                 <span>{!! Str::limit($item->article, 100) !!}</span>
@@ -68,9 +69,9 @@
                                         <div class="place-cap-bottom">
                                             <ul>
                                                 <!-- <li>
-                                                                                                        <i class="far fa-clock"></i
-                                                                                                        >3 Days
-                                                                                                    </li> -->
+                                                                                                                    <i class="far fa-clock"></i
+                                                                                                                    >3 Days
+                                                                                                                </li> -->
                                                 <li>
                                                     <i class="fas fa-comment"></i>10 Komentar
                                                 </li>
