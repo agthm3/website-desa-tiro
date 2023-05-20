@@ -7,6 +7,7 @@ use App\Http\Controllers\DestinasiController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\HomController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KomentarBeritaController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\NewsController;
@@ -33,6 +34,9 @@ use PhpParser\Node\Expr\PostDec;
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
+
+//Komentar Berita
+Route::post('/berita/komentar', [KomentarBeritaController::class, 'store'])->name('komentar.berita.store');
 
 // Dev Page
 Route::get('/maintenance', [HomeController::class, 'maintenance'])->name('maintenance.index');

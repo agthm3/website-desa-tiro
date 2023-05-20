@@ -14,4 +14,8 @@ class News extends Model
         'article',
         'image'
     ];
+
+    public function comment(){
+        return $this->hasMany(KomentarBerita::class);
+    }
 }

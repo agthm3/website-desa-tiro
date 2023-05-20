@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\KomentarBerita;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -69,7 +70,10 @@ class NewsController extends Controller
 
         // ambil artikel selanjutnya
         $nextNews = News::where('id', '>', $news->id)->orderBy('id', 'asc')->first();
-        return view('pages.berita.show', compact('news', 'previousNews', 'nextNews'));
+
+         $comments = KomentarBerita::where('news_id', $news->id)->get();
+         $totalComment = $comments->count();
+        return view('pages.berita.show', compact('news', 'previousNews', 'nextNews', 'comments', 'totalComment'));
     }
 
     /**

@@ -39,7 +39,7 @@
                                     </div>
 
                                     <div class="blog_details">
-                                        <a class="d-inline-block" href="single-blog.html">
+                                        <a class="d-inline-block" href="{{ route('pages.news.show', $item) }}">
                                             <h2>
                                                 {{ $item->title }}
                                             </h2>
