@@ -15,7 +15,7 @@ class News extends Model
         'image'
     ];
 
-    public function comment(){
-        return $this->hasMany(KomentarBerita::class);
+    public function comments(){
+        return $this->hasMany(KomentarBerita::class, 'news_id');
     }
 }

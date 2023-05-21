@@ -19,7 +19,8 @@ class NewsController extends Controller
     {
         $news = News::all();
         session(['active_button' => 'news']);
-        return view('dashboard.news.index', compact('news'));
+      
+        return view('dashboard.news.index', compact('news' ));
     }
 
     /**

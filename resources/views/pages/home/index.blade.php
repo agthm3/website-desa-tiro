@@ -138,17 +138,13 @@
                 <div class="row">
                     @foreach ($news as $item)
                         <div class="col-xl-4 col-lg-4 col-md-6">
-                            <a href="">
+                            <a href="{{ route('pages.news.show', $item) }}">
                                 <div class="single-place mb-30">
                                     <div class="place-img">
                                         <img class="card-img rounded-0" src="{{ url('storage/' . $item->image) }}">
                                     </div>
                                     <div class="place-cap">
                                         <div class="place-cap-top">
-                                            <!-- <span
-                                                                                                ><i class="fas fa-star"></i
-                                                                                                ><span>8.0 Superb</span>
-                                                                                            </span> -->
                                             <h3>
                                                 <a href="#">{{ $item->title }}
                                                 </a>
@@ -165,12 +161,8 @@
                                         </div>
                                         <div class="place-cap-bottom">
                                             <ul>
-                                                <!-- <li>
-                                                                                                    <i class="far fa-clock"></i
-                                                                                                    >3 Days
-                                                                                                </li> -->
                                                 <li>
-                                                    <i class="fas fa-comment"></i>10 Komentar
+                                                    <i class="fas fa-comment"></i>{{ $item->comments_count }} Komentar
                                                 </li>
                                                 <li>
                                                     <i class="fas fa-user"></i>Admin
@@ -209,9 +201,9 @@
                                     <div class="place-cap">
                                         <div class="place-cap-top">
                                             <!-- <span
-                                                                                                ><i class="fas fa-star"></i
-                                                                                                ><span>8.0 Superb</span>
-                                                                                            </span> -->
+                                                                                                                                                                                                    ><i class="fas fa-star"></i
+                                                                                                                                                                                                    ><span>8.0 Superb</span>
+                                                                                                                                                                                                </span> -->
                                             <h3>
                                                 <a href="#">{{ $item->title }}</a>
                                             </h3>
@@ -232,9 +224,9 @@
                                         <div class="place-cap-bottom">
                                             <ul>
                                                 <!-- <li>
-                                                                                                    <i class="far fa-clock"></i
-                                                                                                    >3 Days
-                                                                                                </li> -->
+                                                                                                                                                                                                        <i class="far fa-clock"></i
+                                                                                                                                                                                                        >3 Days
+                                                                                                                                                                                                    </li> -->
                                                 <li>
                                                     <i class="fas fa-comment"></i>10 Komentar
                                                 </li>
@@ -254,33 +246,33 @@
         <!-- Favourite Places End -->
         <!-- Video Start Arera -->
         <!-- <div
-                                                                class="video-area video-bg pt-200 pb-200"
-                                                                data-background="assets/img/service/video-bg.jpg"
-                                                            >
-                                                                <div class="container">
-                                                                    <div class="row">
-                                                                        <div class="col-xl-12">
-                                                                            <div class="video-caption text-center">
-                                                                                <div class="video-icon">
-                                                                                    <a
-                                                                                        class="popup-video"
-                                                                                        href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
-                                                                                        tabindex="0"
-                                                                                        ><i class="fas fa-play"></i
-                                                                                    ></a>
-                                                                                </div>
-                                                                                <p class="pera1">
-                                                                                    Love where you're going in the perfect time
-                                                                                </p>
-                                                                                <p class="pera2">
-                                                                                    Tripo is a World Leading Online
-                                                                                </p>
-                                                                                <p class="pera3">Tour Booking Platform</p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div> -->
+                                                                                                                                                                    class="video-area video-bg pt-200 pb-200"
+                                                                                                                                                                    data-background="assets/img/service/video-bg.jpg"
+                                                                                                                                                                >
+                                                                                                                                                                    <div class="container">
+                                                                                                                                                                        <div class="row">
+                                                                                                                                                                            <div class="col-xl-12">
+                                                                                                                                                                                <div class="video-caption text-center">
+                                                                                                                                                                                    <div class="video-icon">
+                                                                                                                                                                                        <a
+                                                                                                                                                                                            class="popup-video"
+                                                                                                                                                                                            href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
+                                                                                                                                                                                            tabindex="0"
+                                                                                                                                                                                            ><i class="fas fa-play"></i
+                                                                                                                                                                                        ></a>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <p class="pera1">
+                                                                                                                                                                                        Love where you're going in the perfect time
+                                                                                                                                                                                    </p>
+                                                                                                                                                                                    <p class="pera2">
+                                                                                                                                                                                        Tripo is a World Leading Online
+                                                                                                                                                                                    </p>
+                                                                                                                                                                                    <p class="pera3">Tour Booking Platform</p>
+                                                                                                                                                                                </div>
+                                                                                                                                                                            </div>
+                                                                                                                                                                        </div>
+                                                                                                                                                                    </div>
+                                                                                                                                                                </div> -->
         <!-- Video Start End -->
         <!-- Support Company Start-->
         <div class="support-company-area support-padding fix">
