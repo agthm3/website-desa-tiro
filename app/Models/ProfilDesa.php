@@ -14,4 +14,8 @@ class ProfilDesa extends Model
         'image',
         'article'
     ];
+
+    public function comments(){
+        return $this->hasMany(ProfilComment::class);
+    }
 }

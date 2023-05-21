@@ -201,9 +201,9 @@
                                     <div class="place-cap">
                                         <div class="place-cap-top">
                                             <!-- <span
-                                                                                                                                                                                                                                    ><i class="fas fa-star"></i
-                                                                                                                                                                                                                                    ><span>8.0 Superb</span>
-                                                                                                                                                                                                                                </span> -->
+                                                                                                                                                                                                                                                        ><i class="fas fa-star"></i
+                                                                                                                                                                                                                                                        ><span>8.0 Superb</span>
+                                                                                                                                                                                                                                                    </span> -->
                                             <h3>
                                                 <a
                                                     href="{{ route('pages.destination.show', $item) }}">{{ $item->title }}</a>
@@ -224,13 +224,10 @@
 
                                         <div class="place-cap-bottom">
                                             <ul>
-                                                <!-- <li>
-                                                                                                                                                                                                                                        <i class="far fa-clock"></i
-                                                                                                                                                                                                                                        >3 Days
-                                                                                                                                                                                                                                    </li> -->
+
                                                 <li>
-                                                    <i
-                                                        class="fas fa-comment"></i>{{ $item->destination_comments_count }}Komentar
+                                                    <i class="fas fa-comment"></i>{{ $item->destination_comments_count }}
+                                                    Komentar
                                                 </li>
                                                 <li>
                                                     <i class="fas fa-user"></i>Admin
@@ -248,33 +245,33 @@
         <!-- Favourite Places End -->
         <!-- Video Start Arera -->
         <!-- <div
-                                                                                                                                                                                                    class="video-area video-bg pt-200 pb-200"
-                                                                                                                                                                                                    data-background="assets/img/service/video-bg.jpg"
-                                                                                                                                                                                                >
-                                                                                                                                                                                                    <div class="container">
-                                                                                                                                                                                                        <div class="row">
-                                                                                                                                                                                                            <div class="col-xl-12">
-                                                                                                                                                                                                                <div class="video-caption text-center">
-                                                                                                                                                                                                                    <div class="video-icon">
-                                                                                                                                                                                                                        <a
-                                                                                                                                                                                                                            class="popup-video"
-                                                                                                                                                                                                                            href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
-                                                                                                                                                                                                                            tabindex="0"
-                                                                                                                                                                                                                            ><i class="fas fa-play"></i
-                                                                                                                                                                                                                        ></a>
-                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                    <p class="pera1">
-                                                                                                                                                                                                                        Love where you're going in the perfect time
-                                                                                                                                                                                                                    </p>
-                                                                                                                                                                                                                    <p class="pera2">
-                                                                                                                                                                                                                        Tripo is a World Leading Online
-                                                                                                                                                                                                                    </p>
-                                                                                                                                                                                                                    <p class="pera3">Tour Booking Platform</p>
-                                                                                                                                                                                                                </div>
-                                                                                                                                                                                                            </div>
-                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                </div> -->
+                                                                                                                                                                                                                        class="video-area video-bg pt-200 pb-200"
+                                                                                                                                                                                                                        data-background="assets/img/service/video-bg.jpg"
+                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                        <div class="container">
+                                                                                                                                                                                                                            <div class="row">
+                                                                                                                                                                                                                                <div class="col-xl-12">
+                                                                                                                                                                                                                                    <div class="video-caption text-center">
+                                                                                                                                                                                                                                        <div class="video-icon">
+                                                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                                                class="popup-video"
+                                                                                                                                                                                                                                                href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
+                                                                                                                                                                                                                                                tabindex="0"
+                                                                                                                                                                                                                                                ><i class="fas fa-play"></i
+                                                                                                                                                                                                                                            ></a>
+                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                        <p class="pera1">
+                                                                                                                                                                                                                                            Love where you're going in the perfect time
+                                                                                                                                                                                                                                        </p>
+                                                                                                                                                                                                                                        <p class="pera2">
+                                                                                                                                                                                                                                            Tripo is a World Leading Online
+                                                                                                                                                                                                                                        </p>
+                                                                                                                                                                                                                                        <p class="pera3">Tour Booking Platform</p>
+                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                    </div> -->
         <!-- Video Start End -->
         <!-- Support Company Start-->
         <div class="support-company-area support-padding fix">

@@ -15,6 +15,7 @@ use App\Http\Controllers\LayananController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PemerintahDesaController;
 use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\ProfilCommentController;
 use App\Http\Controllers\ProfilDesaController;
 use App\Http\Controllers\ProfileController;
 use App\Models\DestinationComment;
@@ -46,6 +47,9 @@ Route::post('/pengumuman/komentar', [AnnouncementCommentController::class, 'stor
 
 //Komentar Destinasi
 Route::post('/destinasi/komentar', [DestinationCommentController::class, 'store'])->name('komentar.destination.store');
+
+//Komentar Profil
+Route::post('/profil/komentar', [ProfilCommentController::class, 'store'])->name('komentar.profil.store');
 
 // Dev Page
 Route::get('/maintenance', [HomeController::class, 'maintenance'])->name('maintenance.index');

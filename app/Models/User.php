@@ -53,4 +53,8 @@ class User extends Authenticatable
     public function destination_comments(){
         return $this->hasMany(DestinationComment::class);
     }
+
+    public function profil_comments(){
+        return $this->hasMany(ProfilComment::class);
+    }
 }
