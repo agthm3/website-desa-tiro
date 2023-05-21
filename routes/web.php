@@ -13,6 +13,7 @@ use App\Http\Controllers\KomentarBeritaController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PemerintahCommentController;
 use App\Http\Controllers\PemerintahDesaController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProfilCommentController;
@@ -50,6 +51,9 @@ Route::post('/destinasi/komentar', [DestinationCommentController::class, 'store'
 
 //Komentar Profil
 Route::post('/profil/komentar', [ProfilCommentController::class, 'store'])->name('komentar.profil.store');
+
+//Komentar Pemerintah
+Route::post('/pemerintah/komentar', [PemerintahCommentController::class, 'store'])->name('komentar.pemerintah.store');
 
 // Dev Page
 Route::get('/maintenance', [HomeController::class, 'maintenance'])->name('maintenance.index');

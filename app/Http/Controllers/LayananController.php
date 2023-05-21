@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Announcement;
 use App\Models\Layanan;
+use App\Models\PemerintahComment;
 use App\Models\PemerintahDesa;
 use App\Models\ProfilComment;
 use App\Models\ProfilDesa;
@@ -26,7 +27,9 @@ class LayananController extends Controller
     {
           $pemerintah = PemerintahDesa::all()->first();
            $announcements = Announcement::latest()->limit(5)->get();
-        return view('pages.layanan.pemerintah', compact('pemerintah', 'announcements'));
+           $comments = PemerintahComment::where('pemerintah_id', $pemerintah->id)->get();
+           $commentCount = $comments->count();
+        return view('pages.layanan.pemerintah', compact('pemerintah', 'announcements', 'comments', 'commentCount'));
     }
     public function index()
     {

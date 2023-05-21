@@ -57,4 +57,8 @@ class User extends Authenticatable
     public function profil_comments(){
         return $this->hasMany(ProfilComment::class);
     }
+
+    public function pemerintah_comments(){
+        return $this->hasMany(PemerintahDesa::class);
+    }
 }

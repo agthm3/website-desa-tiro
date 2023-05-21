@@ -13,4 +13,8 @@ class PemerintahDesa extends Model
         'image',
         'article'
     ];
+
+    public function comments(){
+        return $this->hasMany(PemerintahComment::class);
+    }
 }
