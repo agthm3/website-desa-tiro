@@ -36,6 +36,10 @@ class KomentarBeritaController extends Controller
         $request->validate([
             'comment' => 'required|string'
         ]);
+        if (!Auth::user()) {
+            return redirect('login');
+        }
+
         $user_id = Auth::user()->id;
         KomentarBerita::create([
             'comment'=> $request->comment,

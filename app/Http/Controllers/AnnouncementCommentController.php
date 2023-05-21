@@ -35,7 +35,9 @@ class AnnouncementCommentController extends Controller
             'comment' => 'required|string',
             
         ]);
-
+        if (!Auth::user()) {
+            return redirect('login');
+        }
         $user_id = Auth::user()->id;
 
         AnnouncementComment::create([

@@ -33,12 +33,15 @@ class DestinationCommentController extends Controller
         $request->validate([
             'comment' => 'required|string'
         ]);
-    $user_id = Auth::user()->id;
-    DestinationComment::create([
-        'comment' => $request->comment,
-        'user_id' => $user_id,
-        'destination_id' => $request->destination_id
-    ]);
+        if (!Auth::user()) {
+            return redirect('login');
+        }
+        $user_id = Auth::user()->id;
+        DestinationComment::create([
+            'comment' => $request->comment,
+            'user_id' => $user_id,
+            'destination_id' => $request->destination_id
+        ]);
 
     return Redirect::back();
     }
