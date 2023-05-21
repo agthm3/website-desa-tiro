@@ -9,6 +9,7 @@ use App\Models\PemerintahDesa;
 use App\Models\ProfilComment;
 use App\Models\ProfilDesa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class LayananController extends Controller
 {
@@ -18,17 +19,28 @@ class LayananController extends Controller
     public function profil()
     {
         $profil = ProfilDesa::all()->first();
+        if ($profil == null ) {
+                return Redirect::route('home');
+        }
         $announcements = Announcement::latest()->limit(5)->get();
         $comments = ProfilComment::where('profil_id', $profil->id)->get();
         $commentCount = $comments->count();
         return view('pages.layanan.profil', compact('profil', 'announcements','comments' , 'commentCount'));
     }
     public function pemerintah()
-    {
+    {    
+        
+    
           $pemerintah = PemerintahDesa::all()->first();
+
+          if ($pemerintah == null ) {
+                return Redirect::route('home');
+           }
            $announcements = Announcement::latest()->limit(5)->get();
            $comments = PemerintahComment::where('pemerintah_id', $pemerintah->id)->get();
            $commentCount = $comments->count();
+
+       
         return view('pages.layanan.pemerintah', compact('pemerintah', 'announcements', 'comments', 'commentCount'));
     }
     public function index()
