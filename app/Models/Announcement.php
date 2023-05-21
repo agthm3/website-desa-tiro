@@ -14,4 +14,8 @@ class Announcement extends Model
         'image',
         'article'
     ];
+
+    public function announcement_comments(){
+        return $this->hasMany(AnnouncementComment::class);
+    }
 }

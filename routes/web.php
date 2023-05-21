@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnouncementCommentController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
@@ -37,6 +38,9 @@ use PhpParser\Node\Expr\PostDec;
 
 //Komentar Berita
 Route::post('/berita/komentar', [KomentarBeritaController::class, 'store'])->name('komentar.berita.store');
+
+//Komentar Pengumuman 
+Route::post('/pengumuman/komentar', [AnnouncementCommentController::class, 'store'])->name('komentar.announcement.store');
 
 // Dev Page
 Route::get('/maintenance', [HomeController::class, 'maintenance'])->name('maintenance.index');

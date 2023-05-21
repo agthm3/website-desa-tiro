@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
+use App\Models\AnnouncementComment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
@@ -67,7 +68,12 @@ class AnnouncementController extends Controller
 
         // ambil artikel selanjutnya
         $nextAnnouncement = Announcement::where('id', '>', $announcement->id)->orderBy('id', 'asc')->first();
-        return view('pages.pengumuman.show', compact('announcement', 'previousAnnouncement', 'nextAnnouncement'));
+
+
+        $comments = AnnouncementComment::where('announcement_id', $announcement->id)->get();
+
+        $commentCount = $comments->count();
+        return view('pages.pengumuman.show', compact('announcement', 'previousAnnouncement', 'nextAnnouncement', 'comments', 'commentCount'));
     }
 
     /**
