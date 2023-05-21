@@ -13,4 +13,8 @@ class Destination extends Model
         'image',
         'article'
     ];
+
+    public function destination_comments(){
+        return $this->hasMany(DestinationComment::class);
+    }
 }

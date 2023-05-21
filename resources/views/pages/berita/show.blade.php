@@ -26,18 +26,7 @@
                             </ul>
 
                             {!! $news->article !!}
-                            <div class="quote-wrapper">
-                                <div class="quotes">
-                                    MCSE boot camps have its supporters and
-                                    its detractors. Some people do not
-                                    understand why you should have to spend
-                                    money on boot camp when you can get the
-                                    MCSE study materials yourself at a
-                                    fraction of the camp price. However, who
-                                    has the willpower to actually sit
-                                    through a self-imposed MCSE training.
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
@@ -125,22 +114,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-author">
-                        <div class="media align-items-center">
-                            <img src="assets/img/blog/author.png" alt="" />
-                            <div class="media-body">
-                                <a href="#">
-                                    <h4>Harvard milan</h4>
-                                </a>
-                                <p>
-                                    Second divided from form fish beast
-                                    made. Every of seas all gathered use
-                                    saying you're, he our dominion twon
-                                    Second divided from
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="comments-area">
                         <h4>{{ $totalComment }} Komentar</h4>
                         @foreach ($comments as $item)
@@ -210,8 +183,7 @@
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="Search Keyword"
-                                            onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Search Keyword'" />
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'" />
                                         <div class="input-group-append">
                                             <button class="btns" type="button">
                                                 <i class="ti-search"></i>

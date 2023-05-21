@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destination;
+use App\Models\DestinationComment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
@@ -66,7 +67,10 @@ class DestinationController extends Controller
 
         // ambil artikel selanjutnya
         $nextDestination = Destination::where('id', '>', $destination->id)->orderBy('id', 'asc')->first();
-        return view('pages.destinasi.show', compact('destination', 'nextDestination', 'previousDestination'));
+
+        $comments = DestinationComment::where('destination_id', $destination->id)->get();
+        $commentCount = $comments->count();
+        return view('pages.destinasi.show', compact('destination', 'nextDestination', 'previousDestination', 'comments', 'commentCount'));
     }
     /**
      * Show the form for editing the specified resource.

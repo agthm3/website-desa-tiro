@@ -5,6 +5,7 @@ use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DestinasiController;
+use App\Http\Controllers\DestinationCommentController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\HomController;
 use App\Http\Controllers\HomeController;
@@ -16,6 +17,7 @@ use App\Http\Controllers\PemerintahDesaController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProfilDesaController;
 use App\Http\Controllers\ProfileController;
+use App\Models\DestinationComment;
 use Illuminate\Support\Facades\Route;
 use PhpParser\Node\Expr\PostDec;
 
@@ -41,6 +43,9 @@ Route::post('/berita/komentar', [KomentarBeritaController::class, 'store'])->nam
 
 //Komentar Pengumuman 
 Route::post('/pengumuman/komentar', [AnnouncementCommentController::class, 'store'])->name('komentar.announcement.store');
+
+//Komentar Destinasi
+Route::post('/destinasi/komentar', [DestinationCommentController::class, 'store'])->name('komentar.destination.store');
 
 // Dev Page
 Route::get('/maintenance', [HomeController::class, 'maintenance'])->name('maintenance.index');

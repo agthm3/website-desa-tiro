@@ -26,18 +26,7 @@
                             </ul>
 
                             {!! $destination->article !!}
-                            <div class="quote-wrapper">
-                                <div class="quotes">
-                                    MCSE boot camps have its supporters and
-                                    its detractors. Some people do not
-                                    understand why you should have to spend
-                                    money on boot camp when you can get the
-                                    MCSE study materials yourself at a
-                                    fraction of the camp price. However, who
-                                    has the willpower to actually sit
-                                    through a self-imposed MCSE training.
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
@@ -125,156 +114,54 @@
                             </div>
                         </div>
                     </div>
-                    <div class="blog-author">
-                        <div class="media align-items-center">
-                            <img src="assets/img/blog/author.png" alt="" />
-                            <div class="media-body">
-                                <a href="#">
-                                    <h4>Harvard milan</h4>
-                                </a>
-                                <p>
-                                    Second divided from form fish beast
-                                    made. Every of seas all gathered use
-                                    saying you're, he our dominion twon
-                                    Second divided from
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="comments-area">
-                        <h4>05 Comments</h4>
-                        <div class="comment-list">
-                            <div class="single-comment justify-content-between d-flex">
-                                <div class="user justify-content-between d-flex">
-                                    <div class="thumb">
-                                        <img src="assets/img/comment/comment_1.png" alt="" />
-                                    </div>
-                                    <div class="desc">
-                                        <p class="comment">
-                                            Multiply sea night grass fourth
-                                            day sea lesser rule open subdue
-                                            female fill which them Blessed,
-                                            give fill lesser bearing
-                                            multiply sea night grass fourth
-                                            day sea lesser
-                                        </p>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex align-items-center">
-                                                <h5>
-                                                    <a href="#">Emilly Blunt</a>
-                                                </h5>
-                                                <p class="date">
-                                                    December 4, 2017 at 3:12
-                                                    pm
-                                                </p>
-                                            </div>
-                                            <div class="reply-btn">
-                                                <a href="#" class="btn-reply text-uppercase">reply</a>
+                        <h4>{{ $commentCount }} Comments</h4>
+                        @foreach ($comments as $item)
+                            <div class="comment-list">
+                                <div class="single-comment justify-content-between d-flex">
+                                    <div class="user justify-content-between d-flex">
+                                        <div class="thumb">
+                                            <img src="assets/img/comment/comment_1.png" alt="" />
+                                        </div>
+                                        <div class="desc">
+                                            <p class="comment">
+                                                {{ $item->comment }}
+                                            </p>
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex align-items-center">
+                                                    <h5>
+                                                        {{ $item->user->name }}
+                                                    </h5>
+                                                    <p class="date">
+                                                        {{ $item->created_at->format('d M Y ') }}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="comment-list">
-                            <div class="single-comment justify-content-between d-flex">
-                                <div class="user justify-content-between d-flex">
-                                    <div class="thumb">
-                                        <img src="assets/img/comment/comment_2.png" alt="" />
-                                    </div>
-                                    <div class="desc">
-                                        <p class="comment">
-                                            Multiply sea night grass fourth
-                                            day sea lesser rule open subdue
-                                            female fill which them Blessed,
-                                            give fill lesser bearing
-                                            multiply sea night grass fourth
-                                            day sea lesser
-                                        </p>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex align-items-center">
-                                                <h5>
-                                                    <a href="#">Emilly Blunt</a>
-                                                </h5>
-                                                <p class="date">
-                                                    December 4, 2017 at 3:12
-                                                    pm
-                                                </p>
-                                            </div>
-                                            <div class="reply-btn">
-                                                <a href="#" class="btn-reply text-uppercase">reply</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comment-list">
-                            <div class="single-comment justify-content-between d-flex">
-                                <div class="user justify-content-between d-flex">
-                                    <div class="thumb">
-                                        <img src="assets/img/comment/comment_3.png" alt="" />
-                                    </div>
-                                    <div class="desc">
-                                        <p class="comment">
-                                            Multiply sea night grass fourth
-                                            day sea lesser rule open subdue
-                                            female fill which them Blessed,
-                                            give fill lesser bearing
-                                            multiply sea night grass fourth
-                                            day sea lesser
-                                        </p>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="d-flex align-items-center">
-                                                <h5>
-                                                    <a href="#">Emilly Blunt</a>
-                                                </h5>
-                                                <p class="date">
-                                                    December 4, 2017 at 3:12
-                                                    pm
-                                                </p>
-                                            </div>
-                                            <div class="reply-btn">
-                                                <a href="#" class="btn-reply text-uppercase">reply</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="comment-form">
-                        <h4>Leave a Reply</h4>
-                        <form class="form-contact comment_form" action="#" id="commentForm">
+                        <h4>Tulis Komentar</h4>
+                        <form class="form-contact comment_form" action="{{ route('komentar.destination.store') }}"
+                            id="commentForm" method="POST">
+                            @csrf
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
                                         <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
-                                            placeholder="Write Comment"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control" name="name" id="name" type="text"
-                                            placeholder="Name" />
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control" name="email" id="email" type="email"
-                                            placeholder="Email" />
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input class="form-control" name="website" id="website" type="text"
-                                            placeholder="Website" />
+                                            placeholder="Tulis Komentar"></textarea>
                                     </div>
                                 </div>
                             </div>
+                            <p>
+                                <input type="hidden" value="{{ $destination->id }}" name="destination_id">
+                            </p>
                             <div class="form-group">
                                 <button type="submit" class="button button-contactForm btn_1 boxed-btn">
-                                    Send Message
+                                    Kirim
                                 </button>
                             </div>
                         </form>
@@ -287,8 +174,7 @@
                                 <div class="form-group">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" placeholder="Search Keyword"
-                                            onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Search Keyword'" />
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'" />
                                         <div class="input-group-append">
                                             <button class="btns" type="button">
                                                 <i class="ti-search"></i>
