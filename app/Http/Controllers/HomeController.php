@@ -21,6 +21,7 @@ class HomeController extends Controller
         // $comments = KomentarBerita::where('news_id', $news->id)->get();
         
          $news->loadCount('comments');
+         $destinations->loadCount('destination_comments');
         return view('pages.home.index', compact('news', 'destinations'));
     }
     public function maintenance()
