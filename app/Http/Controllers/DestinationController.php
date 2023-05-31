@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Destination;
 use App\Models\DestinationComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
@@ -36,17 +37,21 @@ class DestinationController extends Controller
         $request->validate([
             'title' => 'required',
             'article' => 'required',
-            'image' => 'image'
+            'image' => 'image', 
+            'kategori' => 'required|in:umkm,wisata',
+
         ]);
         $file = $request->file('image');
         $path = time() . '_' . $request->name . '.' . $file->getClientOriginalExtension();
 
         Storage::disk('local')->put('public/'. $path, file_get_contents($file));
-
+        $user_id = Auth::user()->id;
         Destination::create([
             'title' => $request->title, 
             'article' => $request->article,
-            'image' => $path
+            'image' => $path, 
+            'kategori' => $request->kategori,
+            'user_id' => $user_id
         ]);
         
         
@@ -89,7 +94,8 @@ class DestinationController extends Controller
         $request->validate([
             'title' => 'required',
             'article' => 'required',
-            'image' => 'image'
+            'image' => 'image',
+            'kategori' => 'required|in:umkm,wisata',
         ]);
 
 
@@ -104,7 +110,8 @@ class DestinationController extends Controller
         $destination->update([
             'title' => $request->title, 
             'article' => $request->article,
-            'image' => $path
+            'image' => $path,
+            'kategori' => $request->kategori
         ]);
         
         

@@ -24,21 +24,17 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>
-                                    Open this select menu
-                                </option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                            <label for="floatingSelect">Kategori</label>
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>{{ $destination->kategori }}</p>
+                                </div>
+                            </div>
                         </div>
                         <div class="form-floating">
                             <p>
                             <div class="card">
                                 <div class="card-body">
-                                    {{ $destination->article }}</div>
+                                    {!! $destination->article !!}</div>
                             </div>
                             </p>
                         </div>

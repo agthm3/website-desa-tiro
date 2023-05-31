@@ -5,8 +5,8 @@
     <div class="container-fluid pt-4 px-4">
         <div class="bg-light text-center rounded p-4">
             <div class="d-flex align-items-center justify-content-between mb-4">
-                <h6 class="mb-0">Daftar Destinasi</h6>
-                <a href="{{ route('dashboard.destination.create') }}">Tambah Destinasi Baru</a>
+                <h6 class="mb-0">Daftar Potensi</h6>
+                <a href="{{ route('dashboard.destination.create') }}">Tambah Potensi Baru</a>
             </div>
             <div class="table-responsive">
                 <table class="table text-start align-middle table-bordered table-hover mb-0">
@@ -18,6 +18,7 @@
                             <th scope="col">Tanggal</th>
                             <th scope="col">Judul</th>
                             <th scope="col">Penulis</th>
+                            <th scope="col">Kategori</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -29,7 +30,8 @@
                                 </td>
                                 <td>{{ $destination->created_at->format('d M Y') }}</td>
                                 <td>{{ $destination->title }}</td>
-                                <td>Jhon Doe</td>
+                                <td>{{ $destination->user->name }}</td>
+                                <td>{{ $destination->kategori }}</td>
                                 <td>
                                     <a class="btn btn-sm btn-primary"
                                         href="{{ route('dashboard.destination.show', $destination) }}">Detail</a>

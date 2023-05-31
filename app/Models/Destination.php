@@ -11,10 +11,15 @@ class Destination extends Model
     protected $fillable = [
         'title',
         'image',
-        'article'
+        'article',
+        'kategori',
+        'user_id'
     ];
 
     public function destination_comments(){
         return $this->hasMany(DestinationComment::class);
+    }
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 }

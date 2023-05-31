@@ -33,20 +33,17 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>
-                                    Open this select menu
-                                </option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                            <select class="form-select" name="kategori" id="floatingSelect"
+                                aria-label="Floating label select example">
+                                <option value="umkm">UMKM</option>
+                                <option value="wisata">Wisata</option>
                             </select>
                             <label for="floatingSelect">Kategori</label>
                         </div>
                         <div class="form-floating">
                             <textarea class="form-control" name="article" value="{{ $destination->article }}" id="floatingTextarea"
                                 style="height: 150px" name="article">{{ $destination->article }}</textarea>
-                            <label for="floatingTextarea">Berita</label>
+
                         </div>
                         <button type="submit" class="btn btn-primary mt-2">
                             Update

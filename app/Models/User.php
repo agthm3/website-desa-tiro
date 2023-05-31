@@ -50,6 +50,10 @@ class User extends Authenticatable
         return $this->hasMany(Announcement::class);
     }
 
+    public function destination(){
+        return $this->hasMany(Destination::class);
+    }
+
     public function announcement_comments(){
         return $this->hasMany(AnnouncementComment::class);
     }

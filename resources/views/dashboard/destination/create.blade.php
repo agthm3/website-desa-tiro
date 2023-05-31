@@ -5,7 +5,7 @@
     <div class="container-fluid pt-4 px-4">
         <div class="row g-4">
             <div class="col-sm-12 col-xl-12">
-                <h1>Tambahkan Destinasi Baru</h1>
+                <h1>Tambahkan Potensi Baru</h1>
                 @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul>
@@ -30,20 +30,18 @@
                         </div>
 
                         <div class="form-floating mb-3">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                                <option selected>
-                                    Open this select menu
+                            <select name="kategori" class="form-select" id="floatingSelect"
+                                aria-label="Floating label select example">
+                                <option value="umkm">
+                                    UMKM
                                 </option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="wisata">Wisata</option>
                             </select>
                             <label for="floatingSelect">Kategori</label>
                         </div>
                         <div class="form-floating">
                             <textarea class="form-control" name="article" placeholder="Leave a comment here" id="floatingTextarea"
                                 style="height: 150px" name="article"></textarea>
-                            <label for="floatingTextarea">Berita</label>
                         </div>
                         <button type="submit" class="btn btn-primary mt-2">
                             Simpan
