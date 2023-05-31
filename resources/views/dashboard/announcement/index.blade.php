@@ -17,7 +17,7 @@
                             </th>
                             <th scope="col">Tanggal</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Author</th>
+                            <th scope="col">Penulis</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
@@ -29,7 +29,7 @@
                                 </td>
                                 <td>{{ $announcement->created_at->format('d M Y') }}</td>
                                 <td>{{ $announcement->title }}</td>
-                                <td>Test</td>
+                                <td>{{ $announcement->user->name }}</td>
                                 <td>
                                     <a class="btn btn-info text-white"
                                         href="{{ route('dashboard.announcement.show', $announcement) }}"
