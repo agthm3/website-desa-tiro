@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Announcement;
 use App\Models\AnnouncementComment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 
@@ -42,11 +43,12 @@ class AnnouncementController extends Controller
         $path = time() . '_' . $request->name . '.' . $file->getClientOriginalExtension();
 
         Storage::disk('local')->put('public/'. $path, file_get_contents($file));
-
+        $user_id = Auth::user()->id;
         Announcement::create([
             'title' => $request->title, 
             'article' => $request->article,
-            'image' => $path
+            'image' => $path, 
+            'user_id' => $user_id
         ]);
         
         

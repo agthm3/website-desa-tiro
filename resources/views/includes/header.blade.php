@@ -24,7 +24,7 @@
                                             <li>
                                                 <a href="{{ route('home') }}">Home</a>
                                             </li>
-                                            <li>
+                                            {{-- <li>
                                                 <a href="{{ route('profil.index') }}">Layanan Desa</a>
                                                 <ul class="submenu">
 
@@ -43,7 +43,7 @@
                                                     </li>
 
                                                 </ul>
-                                            </li>
+                                            </li> --}}
                                             <li>
                                                 <a href="{{ route('berita.index') }}">Berita</a>
                                             </li>
@@ -52,7 +52,7 @@
                                             </li>
 
                                             <li>
-                                                <a href="{{ route('destinasi.index') }}">Destinasi Wisata</a>
+                                                <a href="{{ route('destinasi.index') }}">Potensi Eka Tiro</a>
                                             </li>
 
                                             <li>

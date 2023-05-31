@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h2 class="text-dark">Destinasi Wisata</h2>
+                                <h2 class="text-dark">Potensi Eka Tiro</h2>
                             </div>
                         </div>
                     </div>
@@ -45,9 +45,9 @@
                                     <div class="place-cap">
                                         <div class="place-cap-top">
                                             <!-- <span
-                                                                                                                ><i class="fas fa-star"></i
-                                                                                                                ><span>8.0 Superb</span>
-                                                                                                            </span> -->
+                                                                                                                    ><i class="fas fa-star"></i
+                                                                                                                    ><span>8.0 Superb</span>
+                                                                                                                </span> -->
                                             <h3>
                                                 <a
                                                     href="{{ route('pages.destination.show', $item) }}">{{ $item->title }}</a>
@@ -69,9 +69,9 @@
                                         <div class="place-cap-bottom">
                                             <ul>
                                                 <!-- <li>
-                                                                                                                    <i class="far fa-clock"></i
-                                                                                                                    >3 Days
-                                                                                                                </li> -->
+                                                                                                                        <i class="far fa-clock"></i
+                                                                                                                        >3 Days
+                                                                                                                    </li> -->
                                                 <li>
                                                     <i class="fas fa-comment"></i>10 Komentar
                                                 </li>

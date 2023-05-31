@@ -2,7 +2,7 @@
       <nav class="navbar bg-light navbar-light">
           <a href="index.html" class="navbar-brand mx-4 mb-3">
               <h5 class="text-primary">
-                  <i class="fa fa-hashtag me-2"></i>ADMIN BONTO TIRO
+                  <i class="fa fa-hashtag me-2"></i>ADMIN EKA TIRO
               </h5>
           </a>
           <div class="d-flex align-items-center ms-4 mb-4">
@@ -43,7 +43,7 @@
                       class="fa fa-keyboard me-2"></i>Pengumuman</a>
               <a href="{{ route('dashboard.destination.index') }}"
                   class="nav-item nav-link  {{ session('active_button') == 'destination' ? 'active' : '' }}"><i
-                      class="fa fa-keyboard me-2"></i>Destinasi</a>
+                      class="fa fa-keyboard me-2"></i>Potensi</a>
           </div>
       </nav>
   </div>

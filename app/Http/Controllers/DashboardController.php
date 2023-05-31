@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
+use App\Models\AnnouncementComment;
+use App\Models\Destination;
+use App\Models\KomentarBerita;
+use App\Models\News;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -12,7 +17,18 @@ class DashboardController extends Controller
     public function index()
     {
           session(['active_button' => 'dashboard']);
-        return view('dashboard.home.index');
+
+        $commentsnews = KomentarBerita::all();
+        $commentsannouncement = AnnouncementComment::all();
+        $news = News::all();
+        $announcement = Announcement::all();
+        $destinations = Destination::all();
+
+        $totalComment = $commentsnews->count() + $commentsannouncement->count();
+        $totalNews = $news->count();
+        $totalAnnouncement = $announcement->count();
+        $totalDestination = $destinations->count();
+        return view('dashboard.home.index', compact('commentsnews','commentsannouncement', 'totalComment', 'totalNews', 'totalAnnouncement', 'totalDestination', 'announcement', 'news'));
     }
 
     /**
