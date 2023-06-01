@@ -45,7 +45,7 @@
                                         <p>
                                             {!! Str::limit($item->article, 300) !!}
                                         </p>
-                                        <ul class="blog-info-link">
+                                        {{-- <ul class="blog-info-link">
                                             <li>
                                                 <a href="#"><i class="fa fa-user"></i>
                                                     Travel, Lifestyle</a>
@@ -54,7 +54,7 @@
                                                 <a href="#"><i class="fa fa-comments"></i>
                                                     03 Comments</a>
                                             </li>
-                                        </ul>
+                                        </ul> --}}
                                     </div>
                                 </a>
                             </article>
@@ -103,7 +103,7 @@
                             </form>
                         </aside>
 
-                        <aside class="single_sidebar_widget post_category_widget">
+                        {{-- <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Kategori</h4>
                             <ul class="list cat-list">
                                 <li>
@@ -143,7 +143,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </aside>
+                        </aside> --}}
 
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Pengumuman Terbaru</h3>

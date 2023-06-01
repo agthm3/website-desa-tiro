@@ -73,9 +73,9 @@ class AnnouncementController extends Controller
 
 
         $comments = AnnouncementComment::where('announcement_id', $announcement->id)->get();
-
+        $announcementAll = Announcement::all();
         $commentCount = $comments->count();
-        return view('pages.pengumuman.show', compact('announcement', 'previousAnnouncement', 'nextAnnouncement', 'comments', 'commentCount'));
+        return view('pages.pengumuman.show', compact('announcement', 'previousAnnouncement', 'nextAnnouncement', 'comments', 'commentCount', 'announcementAll'));
     }
 
     /**
