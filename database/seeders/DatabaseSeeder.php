@@ -14,19 +14,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-
-        DB::table('users')->insert([
-            'id' => 1, 
-            'name' => 'Andi Gigatera Halil M',
-            'email' => 'gigam57@gmail.com',
-            'password' => Hash::make('12345678'),
-            // 'is_admin' => true
+        $this->call([
+            UserRoleAdminSeeder::class
         ]);
     }
 }

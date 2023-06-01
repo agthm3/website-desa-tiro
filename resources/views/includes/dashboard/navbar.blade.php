@@ -19,7 +19,6 @@
                                 @csrf
                                 <button class="dropdown-item" type="submit">Logout</button>
                             </form>
-
                         </div>
                     </div>
                 </div>

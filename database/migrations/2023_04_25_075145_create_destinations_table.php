@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('image');
             $table->text('title');
             $table->longText('article');
-            $table->enum('kategori', ['UMKM', 'WISATA   ']);
+            $table->enum('kategori', ['UMKM', 'WISATA']);
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });

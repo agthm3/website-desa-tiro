@@ -70,10 +70,22 @@
 
                                                     </a>
                                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                        <form method="post" action="{{ route('logout') }}">@csrf
-                                                            <button class="form-control" type="submit">Logout</button>
-                                                        </form>
 
+                                                        @if (Auth::user()->role == 'admin')
+                                                            <div class="dropdown-item">
+                                                                <form method="get"
+                                                                    action="{{ route('dashboard.index') }}">
+                                                                    @csrf
+                                                                    <button class="form-control"
+                                                                        type="submit">Dashboard</button>
+                                                                </form>
+                                                            </div>
+                                                        @endif
+                                                        <div class="dropdown-item">
+                                                            <form method="post" action="{{ route('logout') }}">@csrf
+                                                                <button class="form-control" type="submit">Logout</button>
+                                                            </form>
+                                                        </div>
                                                     </div>
                                                 </li>
                                             @endauth
