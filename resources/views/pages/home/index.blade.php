@@ -146,14 +146,14 @@
                                     <div class="place-cap">
                                         <div class="place-cap-top">
                                             <h3>
-                                                <a href="#">{{ $item->title }}
+                                                <a href="{{ route('pages.news.show', $item) }}">{{ $item->title }}
                                                 </a>
                                             </h3>
                                             <p class="dolor">
                                                 <span>{!! Str::limit($item->article, 100) !!}
                                                 </span>
                                             </p>
-                                            <a href="">
+                                            <a href="{{ route('pages.news.show', $item) }}">
                                                 <p class="dolor">
                                                     Baca Selengkapnya...
                                                 </p>
