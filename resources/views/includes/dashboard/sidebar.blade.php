@@ -1,6 +1,6 @@
   <div class="sidebar pe-4 pb-3">
       <nav class="navbar bg-light navbar-light">
-          <a href="index.html" class="navbar-brand mx-4 mb-3">
+          <a href="{{ route('dashboard.index') }}" class="navbar-brand mx-4 mb-3">
               <h5 class="text-primary">
                   <i class="fa fa-hashtag me-2"></i>ADMIN EKA TIRO
               </h5>

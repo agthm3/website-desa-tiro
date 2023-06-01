@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap text-center">
-                                <h2 class="text-dark">Potensi Eka Tiro</h2>
+                                <h2 class="text-dark">UMKM Eka Tiro</h2>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    @foreach ($destinations as $item)
+                    @foreach ($umkm as $item)
                         <div class="col-xl-4 col-lg-4 col-md-6">
                             <a href="{{ route('pages.destination.show', $item) }}">
                                 <div class="single-place mb-30">
@@ -45,9 +45,9 @@
                                     <div class="place-cap">
                                         <div class="place-cap-top">
                                             <!-- <span
-                                                                                                                                                ><i class="fas fa-star"></i
-                                                                                                                                                ><span>8.0 Superb</span>
-                                                                                                                                            </span> -->
+                                                                                                                                                        ><i class="fas fa-star"></i
+                                                                                                                                                        ><span>8.0 Superb</span>
+                                                                                                                                                    </span> -->
                                             <h3>
                                                 <a
                                                     href="{{ route('pages.destination.show', $item) }}">{{ $item->title }}</a>
@@ -60,22 +60,21 @@
                                                 <p class="text-info ml-1" style="font-weight: bolder">
                                                     #{{ strtolower($item->kategori) }}
                                                 </p>
-
                                             </div>
                                         </div>
 
                                         <div class="place-cap-bottom">
                                             <ul>
                                                 <!-- <li>
-                                                                                                                                                    <i class="far fa-clock"></i
-                                                                                                                                                    >3 Days
-                                                                                                                                                </li> -->
+                                                                                                                                                            <i class="far fa-clock"></i
+                                                                                                                                                            >3 Days
+                                                                                                                                                        </li> -->
                                                 <li>
                                                     <i class="fas fa-comment"></i>{{ $item->destination_comments->count() }}
                                                     Komentar
                                                 </li>
                                                 <li>
-                                                    <i class="fas fa-user"></i>Admin
+                                                    <i class="fas fa-user"></i>{{ $item->user->name }}
                                                 </li>
                                             </ul>
                                         </div>

@@ -52,7 +52,10 @@
                                             </li>
 
                                             <li>
-                                                <a href="{{ route('destinasi.index') }}">Potensi Eka Tiro</a>
+                                                <a href="{{ route('destinasi.index') }}">Wisata </a>
+                                            </li>
+                                            <li>
+                                                <a href="{{ route('umkm.index') }}">UMKM</a>
                                             </li>
 
                                             <li>

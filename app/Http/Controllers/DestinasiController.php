@@ -13,10 +13,15 @@ class DestinasiController extends Controller
      */
     public function index()
     {
-        $destinations = Destination::all();
+        $destinations = Destination::where('kategori', 'wisata')->get();
         return view('pages.destinasi.index', compact('destinations'));
     }
 
+    public function umkm(){
+        $umkm = Destination::where('kategori', 'umkm')->get();
+
+        return view('pages.destinasi.umkm', compact('umkm'));
+    }
     /**
      * Show the form for creating a new resource.
      */

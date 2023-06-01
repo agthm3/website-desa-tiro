@@ -72,6 +72,7 @@ Route::get('/pengumuman/{announcement}', [AnnouncementController::class, 'show_p
 
 //pages Destinasi
 Route::get('/destinasi', [DestinasiController::class, 'index'])->name('destinasi.index');
+Route::get('/umkm', [DestinasiController::class, 'umkm'])->name('umkm.index');
 Route::get('/destinasi/{destination}', [DestinationController::class, 'show_pages'])->name('pages.destination.show');
 
 //pages KontakKami
