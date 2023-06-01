@@ -197,7 +197,7 @@
                                 </button>
                             </form>
                         </aside>
-                        <aside class="single_sidebar_widget post_category_widget">
+                        {{-- <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Category</h4>
                             <ul class="list cat-list">
                                 <li>
@@ -237,7 +237,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </aside>
+                        </aside> --}}
                         <aside class="single_sidebar_widget popular_post_widget">
                             <h3 class="widget_title">Pengumuman Terbaru</h3>
                             <div class="media post_item">
