@@ -54,6 +54,10 @@ class User extends Authenticatable
         return $this->hasMany(Destination::class);
     }
 
+    public function news(){
+        return $this->hasMany(News::class);
+    }
+
     public function announcement_comments(){
         return $this->hasMany(AnnouncementComment::class);
     }

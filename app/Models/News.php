@@ -12,10 +12,15 @@ class News extends Model
     protected $fillable = [
         'title', 
         'article',
-        'image'
+        'image',
+        'user_id'
     ];
 
     public function comments(){
         return $this->hasMany(KomentarBerita::class, 'news_id');
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 }
