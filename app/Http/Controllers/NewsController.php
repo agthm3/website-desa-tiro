@@ -74,9 +74,11 @@ class NewsController extends Controller
         // ambil artikel selanjutnya
         $nextNews = News::where('id', '>', $news->id)->orderBy('id', 'asc')->first();
 
+ 
+        $newsAll = News::all();
          $comments = KomentarBerita::where('news_id', $news->id)->get();
          $totalComment = $comments->count();
-        return view('pages.berita.show', compact('news', 'previousNews', 'nextNews', 'comments', 'totalComment'));
+        return view('pages.berita.show', compact('news', 'previousNews', 'nextNews', 'comments', 'totalComment', 'newsAll'));
     }
 
     /**
