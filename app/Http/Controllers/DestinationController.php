@@ -75,7 +75,8 @@ class DestinationController extends Controller
 
         $comments = DestinationComment::where('destination_id', $destination->id)->get();
         $commentCount = $comments->count();
-        return view('pages.destinasi.show', compact('destination', 'nextDestination', 'previousDestination', 'comments', 'commentCount'));
+        $potensiAll = Destination::all();
+        return view('pages.destinasi.show', compact('destination', 'nextDestination', 'previousDestination', 'comments', 'commentCount', 'potensiAll'));
     }
     /**
      * Show the form for editing the specified resource.

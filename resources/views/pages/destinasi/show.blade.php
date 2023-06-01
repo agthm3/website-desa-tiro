@@ -14,7 +14,7 @@
                             <h2>
                                 {{ $destination->title }}
                             </h2>
-                            <ul class="blog-info-link mt-3 mb-4">
+                            {{-- <ul class="blog-info-link mt-3 mb-4">
                                 <li>
                                     <a href="#"><i class="fa fa-user"></i> Travel,
                                         Lifestyle</a>
@@ -23,7 +23,7 @@
                                     <a href="#"><i class="fa fa-comments"></i> 03
                                         Comments</a>
                                 </li>
-                            </ul>
+                            </ul> --}}
 
                             {!! $destination->article !!}
 
@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="navigation-top">
-                        <div class="d-sm-flex justify-content-between text-center">
+                        {{-- <div class="d-sm-flex justify-content-between text-center">
                             <p class="like-info">
                                 <span class="align-middle"><i class="fa fa-heart"></i></span>
                                 Lily and 4 people like this
@@ -53,7 +53,7 @@
                                     <a href="#"><i class="fab fa-behance"></i></a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                         <div class="navigation-area">
                             <div class="row">
                                 <div
@@ -182,13 +182,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                    type="submit">
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn" type="submit">
                                     Search
                                 </button>
                             </form>
                         </aside>
-                        <aside class="single_sidebar_widget post_category_widget">
+                        {{-- <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">Category</h4>
                             <ul class="list cat-list">
                                 <li>
@@ -228,45 +227,20 @@
                                     </a>
                                 </li>
                             </ul>
-                        </aside>
+                        </aside> --}}
                         <aside class="single_sidebar_widget popular_post_widget">
-                            <h3 class="widget_title">Pengumuman Terbaru</h3>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_1.png" alt="post" />
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
+                            <h3 class="widget_title">Potensi Terbaru</h3>
+                            @foreach ($potensiAll as $item)
+                                <div class="media post_item">
+                                    <img src="{{ url('storage/' . $item->image) }}" style="width: 30%" alt="post">
+                                    <div class="media-body">
+                                        <a href="{{ route('pages.news.show', $item) }}">
+                                            <h3>{{ $item->title }}</h3>
+                                        </a>
+                                        <p>{{ $item->created_at->format('d M Y') }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_2.png" alt="post" />
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>The Amazing Hubble</h3>
-                                    </a>
-                                    <p>02 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_3.png" alt="post" />
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Astronomy Or Astrology</h3>
-                                    </a>
-                                    <p>03 Hours ago</p>
-                                </div>
-                            </div>
-                            <div class="media post_item">
-                                <img src="assets/img/post/post_4.png" alt="post" />
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>Asteroids telescope</h3>
-                                    </a>
-                                    <p>01 Hours ago</p>
-                                </div>
-                            </div>
+                            @endforeach
                         </aside>
                     </div>
                 </div>
