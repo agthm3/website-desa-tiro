@@ -10,7 +10,7 @@
                                 <div class="col-lg-4">
                                     <div class="logo">
                                         <a href="{{ route('home') }}"><img
-                                                src="{{ asset('pages/assets/img/logo/logo-navbar-01.png') }}"
+                                                src="{{ asset('pages/assets/img/logo/logo-navbar-02.png') }}"
                                                 alt="" style="width: 40vh" /></a>
                                     </div>
                                 </div>

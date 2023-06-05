@@ -15,7 +15,7 @@
                                     <div class="hero__caption">
                                         <h1>
                                             Selamat Datang di Website
-                                            Bonto Tiro !
+                                            Eka Tiro !
                                         </h1>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle text-center">
-                            <span>Informasi terbaru tentang Bonto Tiro</span>
+                            <span>Informasi terbaru tentang EKA Tiro</span>
                             <h2>Berita Desa</h2>
                         </div>
                     </div>
@@ -186,7 +186,7 @@
                     <div class="col-lg-12">
                         <div class="section-tittle text-center">
                             <span>Kunjungi Destinasi Wisata</span>
-                            <h2>Potensi Bonto Tiro</h2>
+                            <h2>Potensi EKA Tiro</h2>
                         </div>
                     </div>
                 </div>
@@ -241,33 +241,33 @@
         <!-- Favourite Places End -->
         <!-- Video Start Arera -->
         <!-- <div
-                                                                                                                                                                                                                                                    class="video-area video-bg pt-200 pb-200"
-                                                                                                                                                                                                                                                    data-background="assets/img/service/video-bg.jpg"
-                                                                                                                                                                                                                                                >
-                                                                                                                                                                                                                                                    <div class="container">
-                                                                                                                                                                                                                                                        <div class="row">
-                                                                                                                                                                                                                                                            <div class="col-xl-12">
-                                                                                                                                                                                                                                                                <div class="video-caption text-center">
-                                                                                                                                                                                                                                                                    <div class="video-icon">
-                                                                                                                                                                                                                                                                        <a
-                                                                                                                                                                                                                                                                            class="popup-video"
-                                                                                                                                                                                                                                                                            href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
-                                                                                                                                                                                                                                                                            tabindex="0"
-                                                                                                                                                                                                                                                                            ><i class="fas fa-play"></i
-                                                                                                                                                                                                                                                                        ></a>
+                                                                                                                                                                                                                                                        class="video-area video-bg pt-200 pb-200"
+                                                                                                                                                                                                                                                        data-background="assets/img/service/video-bg.jpg"
+                                                                                                                                                                                                                                                    >
+                                                                                                                                                                                                                                                        <div class="container">
+                                                                                                                                                                                                                                                            <div class="row">
+                                                                                                                                                                                                                                                                <div class="col-xl-12">
+                                                                                                                                                                                                                                                                    <div class="video-caption text-center">
+                                                                                                                                                                                                                                                                        <div class="video-icon">
+                                                                                                                                                                                                                                                                            <a
+                                                                                                                                                                                                                                                                                class="popup-video"
+                                                                                                                                                                                                                                                                                href="https://www.youtube.com/watch?v=1aP-TXUpNoU"
+                                                                                                                                                                                                                                                                                tabindex="0"
+                                                                                                                                                                                                                                                                                ><i class="fas fa-play"></i
+                                                                                                                                                                                                                                                                            ></a>
+                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                        <p class="pera1">
+                                                                                                                                                                                                                                                                            Love where you're going in the perfect time
+                                                                                                                                                                                                                                                                        </p>
+                                                                                                                                                                                                                                                                        <p class="pera2">
+                                                                                                                                                                                                                                                                            Tripo is a World Leading Online
+                                                                                                                                                                                                                                                                        </p>
+                                                                                                                                                                                                                                                                        <p class="pera3">Tour Booking Platform</p>
                                                                                                                                                                                                                                                                     </div>
-                                                                                                                                                                                                                                                                    <p class="pera1">
-                                                                                                                                                                                                                                                                        Love where you're going in the perfect time
-                                                                                                                                                                                                                                                                    </p>
-                                                                                                                                                                                                                                                                    <p class="pera2">
-                                                                                                                                                                                                                                                                        Tripo is a World Leading Online
-                                                                                                                                                                                                                                                                    </p>
-                                                                                                                                                                                                                                                                    <p class="pera3">Tour Booking Platform</p>
                                                                                                                                                                                                                                                                 </div>
                                                                                                                                                                                                                                                             </div>
                                                                                                                                                                                                                                                         </div>
-                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                </div> -->
+                                                                                                                                                                                                                                                    </div> -->
         <!-- Video Start End -->
         <!-- Support Company Start-->
         {{-- <div class="support-company-area support-padding fix">
@@ -282,7 +282,7 @@
                         <div class="right-caption">
                             <!-- Section Tittle -->
                             <div class="section-tittle section-tittle2">
-                                <span>Sambutan Kepala Camat Bonto Tiro</span>
+                                <span>Sambutan Kepala Camat EKA Tiro</span>
                                 <h2>Ahmad Sulaiman S.Pd</h2>
                             </div>
                             <div class="support-caption">

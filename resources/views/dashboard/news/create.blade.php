@@ -29,7 +29,7 @@
                             <label for="floatingInput">Judul</label>
                         </div>
 
-                        <div class="form-floating mb-3">
+                        {{-- <div class="form-floating mb-3">
                             <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
                                 <option selected>
                                     Open this select menu
@@ -39,7 +39,7 @@
                                 <option value="3">Three</option>
                             </select>
                             <label for="floatingSelect">Kategori</label>
-                        </div>
+                        </div> --}}
                         <div class="form-floating">
                             <textarea class="form-control" name="article" placeholder="Leave a comment here" id="floatingTextarea"
                                 style="height: 150px" name="article"></textarea>

@@ -9,7 +9,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="{{ asset('pages/assets/img/logo/logo-footer.png') }}"
+                                    <a href="index.html"><img src="{{ asset('pages/assets/img/logo/logo-footer2.png') }}"
                                             alt="" style="width: 80%" /></a>
                                 </div>
                                 <div class="footer-tittle">
